@@ -1,5 +1,4 @@
 import configparser
-
 import mysql.connector
 from mysql.connector import Error
 
@@ -26,13 +25,13 @@ def getConnection():
     except Error as e:
         print(e)
 
-
-def getQuery(query):
-    conn = getConnection()
-    cursor = conn.cursor()
-    cursor.execute(query)
-    row = cursor.fetchone()
-    conn.close()
-    return row
+#
+# def getQuery(query):
+#     conn = getConnection()
+#     cursor = conn.cursor()
+#     cursor.execute(query)
+#     row = cursor.fetchone()
+#     conn.close()
+#     return row
 
 
